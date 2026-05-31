@@ -51,7 +51,7 @@ function ServiceCard({ icon: Icon, title, description }: Service) {
   return (
     <div className="group relative overflow-hidden p-10 bg-blue-50 dark:bg-[#112240]/40 backdrop-blur-sm border border-[#e5e0d8] dark:border-white/5 rounded-[32px] hover:shadow-[0_8px_30px_rgba(10,25,47,0.15)] dark:hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-2">
       <div className="absolute top-0 right-0 w-32 h-32 bg-[#0a192f]/10 dark:bg-orange-500/10 blur-3xl -mr-16 -mt-16" />
-      <div className="w-14 h-14 rounded-2xl bg-orange-500/10 dark:bg-blue-600/10 flex items-center justify-center text-orange-500 dark:text-blue-400 mb-8 group-hover:bg-orange-500 dark:group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 relative z-10">
+      <div className="w-14 h-14 rounded-2xl bg-orange-500/10 dark:bg-blue-600/10 flex items-center justify-center text-orange-500 dark:text-blue-400 mb-8 group-hover:bg-orange-500 dark:group-hover:bg-blue-600 group-hover:text-white dark:group-hover:text-white transition-all duration-500 relative z-10">
         <Icon size={26} />
       </div>
       <h3 className={`${tinos.className} text-lg font-bold text-[#0f172a] dark:text-[#f5ede0] mb-2 relative z-10`}>{title}</h3>

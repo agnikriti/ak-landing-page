@@ -21,7 +21,7 @@ const ABOUT_POINTS = [
 
 export function About() {
   return (
-    <section id="about" className="bg-blue-50 dark:bg-[#0f172a] px-10 py-24 border-y border-[#e5e0d8] dark:border-[#1e293b]">
+    <section id="about" className="bg-blue-50 dark:bg-[#030a16] px-10 py-24 border-y border-[#e5e0d8] dark:border-[#1e293b]">
       <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         <div className="space-y-8">

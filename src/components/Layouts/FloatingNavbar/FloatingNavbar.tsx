@@ -55,7 +55,7 @@ export function Navbar() {
     <nav className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-6xl">
       <div className="backdrop-blur-md bg-blue-100/80 dark:bg-[#0a192f]/60 border border-black/10 dark:border-white/10 rounded-full px-5 py-3 md:px-10 md:py-5 shadow-lg flex items-center justify-between">
         <Link href="/" aria-label="Home">
-          <Image src="/assets/ak-logo.svg" alt="Agnikriti" width={36} height={36} className="md:w-[52px] md:h-[52px] select-none drop-shadow-[0_0_8px_rgba(241,108,7,0.5)]" />
+          <Image src="/assets/ak-logo.svg" alt="Agnikriti" width={36} height={36} className="md:w-[40px] md:h-[40px] select-none drop-shadow-[0_0_8px_rgba(241,108,7,0.5)]" />
         </Link>
 
         {/* Desktop nav */}

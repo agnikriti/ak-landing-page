@@ -25,8 +25,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.agnikriti.com"),
   title: "Agnikriti",
-  description: "Born in fire, forged by trust",
+  description: "Digital solutions crafted with precision.",
+  openGraph: {
+    title: "Agnikriti",
+    description: "Digital solutions crafted with precision.",
+    url: "https://www.agnikriti.com",
+    siteName: "Agnikriti",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Agnikriti — Digital solutions crafted with precision",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Agnikriti",
+    description: "Digital solutions crafted with precision.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

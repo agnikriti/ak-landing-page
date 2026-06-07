@@ -13,10 +13,10 @@ const PRICING_POINTS = [
 ];
 
 const ABOUT_POINTS = [
-  "A team of professionals helping businesses thrive in the digital landscape.",
-  "Navigate the challenges of building and scaling your online presence with trust and ease.",
-  "Committed to providing the best possible service and support at every step.",
-  "Tailored plans for businesses of all sizes — from early startups to large enterprises.",
+  "We are a team of professionals who are helping businesses thrive in the digital landscape.",
+  "We are here to help your firm navigate the challenges of building and scaling your online presence with trust and ease.",
+  "We are committed to providing the best possible service and support at every step.",
+  "Our plans are tailored plans for businesses of all sizes — from early startups to large enterprises.",
 ];
 
 export function About() {

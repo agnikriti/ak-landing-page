@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const NAV_LINKS = [
@@ -15,6 +15,17 @@ const NAV_LINKS = [
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const sectionIds = ["about", "services", "contact"];
@@ -52,11 +63,19 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-6xl">
+    <nav ref={navRef} className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-6xl">
       <div className="backdrop-blur-md bg-blue-100/80 dark:bg-[#0a192f]/60 border border-black/10 dark:border-white/10 rounded-full px-5 py-3 md:px-10 md:py-5 shadow-lg flex items-center justify-between">
         <Link href="/" aria-label="Home">
           <Image src="/assets/ak-logo.svg" alt="Agnikriti" width={36} height={36} className="md:w-[40px] md:h-[40px] select-none drop-shadow-[0_0_8px_rgba(241,108,7,0.5)]" />
         </Link>
+
+        {/* Mobile active section indicator */}
+        <div className="flex md:hidden items-center gap-1.5 text-blue-600 dark:text-orange-500">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-orange-400" />
+          <span className="text-[11px] uppercase tracking-[0.2em] font-medium">
+            {NAV_LINKS.find((l) => l.section === activeSection)?.label}
+          </span>
+        </div>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
